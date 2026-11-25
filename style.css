@@ -147,3 +147,38 @@ h1 {
   .page { padding-top: 56px; }
   h1 { font-size: 1.5rem; }
 }
+
+.photo-consult {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-photo {
+  min-height: 64px;
+  font-size: 1.125rem;
+  justify-content: center;
+}
+
+.photo-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn-form {
+  min-height: 52px;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.42);
+  box-shadow: none;
+}
+
+.btn-form:hover,
+.btn-form:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
