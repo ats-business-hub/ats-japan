@@ -1,0 +1,24 @@
+/* クイックビュー（/container/ /kakou/）用。style.css に追加で読み込む */
+.page { padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
+.back { display:inline-block; margin-bottom:14px; color:var(--muted); font-size:.85rem; text-decoration:none; }
+.lead { margin:10px 0 0; font-size:.95rem; color:#fff; }
+.ok3 { display:grid; gap:8px; margin:18px 0 22px; padding:0; list-style:none; }
+.ok3 li { background:rgba(255,255,255,.06); border:1px solid var(--line); border-left:4px solid #FFD400; border-radius:10px; padding:10px 12px; font-size:.92rem; }
+.ok3 b { color:#FFD400; }
+h2 { font-size:1.1rem; margin:26px 0 10px; padding-left:10px; border-left:4px solid var(--red); line-height:1.4; }
+.tbl { width:100%; border-collapse:collapse; font-size:.86rem; background:rgba(255,255,255,.04); border-radius:10px; overflow:hidden; }
+.tbl th, .tbl td { border-bottom:1px solid var(--line); padding:9px 8px; text-align:left; vertical-align:top; }
+.tbl th { background:rgba(230,0,18,.85); color:#fff; font-weight:700; }
+.tbl td.p { white-space:nowrap; font-weight:700; color:#FFD400; }
+.note { color:var(--muted); font-size:.78rem; margin:8px 0 0; line-height:1.55; }
+.cta { display:grid; gap:10px; margin-top:22px; }
+.cta .btn { justify-content:center; font-size:1.05rem; min-height:58px; }
+.btn-yellow { background:#FFD400; color:#111; }
+.btn-yellow:hover, .btn-yellow:focus-visible { background:#ffe14d; color:#111; }
+.more { display:grid; gap:10px; margin-top:22px; }
+.bar { position:fixed; left:0; right:0; bottom:0; z-index:10; display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; padding:8px 8px calc(8px + env(safe-area-inset-bottom)); background:rgba(20,14,12,.96); border-top:1px solid var(--line); }
+.bar a { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:54px; border-radius:10px; text-decoration:none; font-weight:700; font-size:.82rem; line-height:1.25; color:#fff; background:#333; }
+.bar a.tel { background:var(--red); }
+.bar a.photo { background:#FFD400; color:#111; }
+.bar small { font-weight:600; font-size:.7rem; opacity:.85; }
+@media (min-width:600px){ .bar { left:50%; right:auto; width:440px; transform:translateX(-50%); border-radius:14px 14px 0 0; } }
