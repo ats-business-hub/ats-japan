@@ -1,0 +1,149 @@
+/* ATS, Japan 公式リンク — mobile-first */
+:root {
+  --red: #E60012;
+  --red-hover: #c40010;
+  --bg: #140E0C;
+  --bg-2: #1C1311;
+  --ink: #FFFFFF;
+  --muted: #C9C0BC;
+  --btn: #FAF7F5;
+  --btn-text: #1A1210;
+  --btn-hover: #FFFFFF;
+  --line: rgba(255, 255, 255, 0.12);
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(1200px 500px at 50% -80px, rgba(230, 0, 18, 0.22), transparent 60%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 40%);
+}
+
+.page {
+  width: min(440px, 100%);
+  margin: 0 auto;
+  padding: 36px 20px 40px;
+  padding-top: calc(28px + env(safe-area-inset-top));
+  padding-bottom: calc(40px + env(safe-area-inset-bottom));
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  display: block;
+  width: min(260px, 72vw);
+  height: auto;
+  margin: 0 auto 18px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+.tag,
+.addr {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.tag { margin-bottom: 4px; }
+
+.links {
+  display: grid;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--btn);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--btn-hover);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.btn:focus-visible {
+  box-shadow: var(--shadow), 0 0 0 3px rgba(230, 0, 18, 0.55);
+}
+
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--red-hover);
+  color: #fff;
+}
+
+.ico {
+  flex: 0 0 22px;
+  display: inline-flex;
+  color: inherit;
+}
+
+.label { flex: 1 1 auto; }
+
+.meta {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 0.8rem;
+  opacity: 0.78;
+  letter-spacing: 0.01em;
+}
+
+.footer {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.footer p { margin: 0 0 4px; }
+
+@media (min-width: 600px) {
+  .page { padding-top: 56px; }
+  h1 { font-size: 1.5rem; }
+}
